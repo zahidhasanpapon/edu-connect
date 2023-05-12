@@ -3,6 +3,7 @@ package com.example.education.educonnect.entity;
 import lombok.*;
 import jakarta.persistence.*;
 
+import lombok.experimental.SuperBuilder;
 import org.hibernate.validator.constraints.Length;
 
 import jakarta.validation.constraints.Email;
@@ -11,6 +12,7 @@ import java.time.LocalDateTime;
 
 @Getter
 @Setter
+@SuperBuilder
 @MappedSuperclass
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public abstract class BaseUserEntity {
